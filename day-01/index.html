@@ -1,82 +1,64 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css">
     <title>FORM LỊCH KHÁM</title>
-</head>
+  </head>
 
-<body>
-    <header>Đặt Lịch Khám</header>
-<main>
-    <form method="get">
-
+  <body>
+    <header><h1>Đặt Lịch Khám</h1></header>
+    <main>
+      <form method="get">
         <div>
-            <label for="name">Họ và tên bệnh nhân</label>
-            <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Xin mời nhập họ tên"
-                required
-            >
+          <label for="name">Họ và tên bệnh nhân</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Xin mời nhập họ tên"
+            required
+          />
         </div>
 
         <div>
-            <label for="phone">Số điện thoại</label>
-            <input
-                type="tel"
-                id="phone"
-                name="phone"
-                placeholder="Nhập số điện thoại của bạn"
-                required
-            >
+          <label for="phone">Số điện thoại</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Nhập số điện thoại của bạn"
+            required
+          />
         </div>
 
         <div>
-            <label for="date">Ngày</label>
-            <input
-                type="date"
-                id="date"
-                name="date"
-                required
-            >
+          <label for="date">Ngày</label>
+          <input type="date" id="date" name="date" required />
         </div>
 
         <div>
-            <label for="time">Giờ</label>
-            <input
-                type="time"
-                id="time"
-                name="time"
-                required
-            >
+          <label for="time">Giờ</label>
+          <input type="time" id="time" name="time" required />
         </div>
 
         <div>
-            <label for="reason">Lý do</label>
-            <textarea
-                id="reason"
-                name="reason"
-                required></textarea>
-    </div>
+          <label for="reason">Lý do</label>
+          <textarea id="reason" name="reason" required></textarea>
+        </div>
 
-
-    <div>
-        <label for="chuyen-khoa">Chuyên Khoa</label>
-    <select name="chuyen-khoa" id="chuyen-khoa" required>
-        <option value="" disabled selected></option>
-        <option value="noi">Nội</option>
-        <option value="nhi">Nhi</option>
-        <option value="rang-ham-mat">Răng Hàm Mặt</option>
-    </select>
-</div>
+        <div>
+          <label for="chuyen-khoa">Chuyên Khoa</label>
+          <select name="chuyen-khoa" id="chuyen-khoa" required>
+            <option value="" disabled selected></option>
+            <option value="noi">Nội</option>
+            <option value="nhi">Nhi</option>
+            <option value="rang-ham-mat">Răng Hàm Mặt</option>
+          </select>
+        </div>
         <button type="submit">Đặt lịch</button>
-
-    </form>
-</main>
-</body>
-
+      </form>
+    </main>
+  </body>
 </html>
