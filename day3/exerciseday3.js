@@ -5,9 +5,9 @@ console.log("Từ C=30 đổi sang F = ",f);
 
 
 console.log("Bài 2:")
-const num =17;
+const num =18;
 if(num %2 === 0){
-    consle.log("Số Chẵn")
+    console.log("Số Chẵn")
 }else{
     console.log("Số Lẻ")
 }
@@ -26,7 +26,8 @@ console.log("Bài 4:")
 const lastName = "Nguyễn";
 const middleName ="Văn";
 const firstName ="An";
-const fullName =`$(lastName) $(middleName) $(firstName)`;
+const fullName =`${lastName} ${middleName} ${firstName}`;
+console.log(`[${fullName}]`);
 
 
 
@@ -62,9 +63,9 @@ console.log("Tổng tiền là: ",payTotal);
 
 console.log("Bài 8:");
 const minute = 135;
-const hour = Math.floor(135 / 60);
-const aMinute = 135 % 60;
-console.log(`Số giờ là $(hour) và số phút còn lại là $(aMinute)`);
+const hour = Math.floor(minute / 60);
+const aMinute = minute % 60;
+console.log(`số giờ là ${hour} và số phút là ${aMinute}`);
 
 
 
