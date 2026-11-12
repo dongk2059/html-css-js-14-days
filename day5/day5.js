@@ -3,7 +3,7 @@ console.log("=========Bài 1==========")
 function calculateBMI(w, h){
     const result = w / (h*h);
     if(w <= 0 || h <=0){
-        console.log("null");
+        return null;
     }else{
         return result.toFixed(2);
     }
