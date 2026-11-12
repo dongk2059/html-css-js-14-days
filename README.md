@@ -13,5 +13,5 @@ Kiến thức đã học
 Kiểm chứng
 1. Mở day-01/index.html bằng trình duyệt.
 2. Điền họ tên, số điện thoại, ngày, giờ, lý do và chọn chuyên khoa.
-3. Nhấn Đặt lịch, sau đó quan sát URL có dạng ...?name=...&phone=...&date=...&time=...&reason=...&specialty=nhi nếu chọn Nhi.
+3. Nhấn Đặt lịch, sau đó quan sát URL có dạng ...?name=...&phone=...&date=...&time=...&reason=...&chuyen-khoa=nhi nếu chọn nhi.
 Đây là form thực hành dùng phương thức GET. Không nhập thông tin bệnh nhân thật: dữ liệu GET xuất hiện trong URL và có thể lưu trong lịch sử trình duyệt. Ứng dụng thực tế nên gửi dữ liệu qua HTTPS bằng POST và kiểm tra ở backend.

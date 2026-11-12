@@ -1,7 +1,5 @@
 {
-    "liveServer.settings.ignoreFiles": [
-    "**/*.js",
-    "**/*.css",
-    "**/*.html"
-  ]
+  "files.trimTrailingWhitespace": true,
+
+  "liveServer.settings.ignoreFiles": ["**/*.js", "**/*.css", "**/*.html"]
 }

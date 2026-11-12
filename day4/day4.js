@@ -67,6 +67,13 @@ for (let i = 1; i < numbers.length; i++) {
     }
 }
 
+for(const numberr of numbers){
+    if(numberr > 50){
+        console.log("số đầu tiên lớn hơn 50 là: ", numberr)
+        break;
+    }
+}
+
 console.log("Mảng:", numbers);
 console.log("Số lớn nhất:", max);
 
@@ -78,9 +85,9 @@ console.log("Số lớn nhất:", max);
 
 console.log("\n===== BÀI 4: KIỂM TRA SỐ NGUYÊN TỐ =====");
 
-const n =29;
+const n =9;
 
-const isPrime = true;
+let isPrime = true;
 
 
 if(n < 2){
@@ -95,11 +102,9 @@ if(n < 2){
 
 }
 
-if (isPrime) {
-    console.log(n, "là số nguyên tố");
-} else {
-    console.log(n, "không phải số nguyên tố");
-}
+isPrime
+  ? console.log(n, "là số nguyên tố")
+  : console.log(n, "không phải số nguyên tố");
 
 
 // =====================================
@@ -124,6 +129,23 @@ while(number > 0){
 console.log("Số ban đầu:", num);
 console.log("Tổng các chữ số:", sum);
 
+
+
+
+console.log("============= IN RA BẢNG 7 ===============")
+const x =7;
+for(let i = 1; i <= 10; i++){
+    console.log(`7 x ${i} = ${x * i}`);
+}
+
+console.log("Cách 2")
+
+let i = 1;
+
+while (i <= 10) {
+  console.log(`7 x ${i} = ${7 * i}`);
+  i++;
+}
 
 
 
