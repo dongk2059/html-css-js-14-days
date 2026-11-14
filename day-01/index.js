@@ -121,3 +121,59 @@ const tests = [
 tests.forEach((t, i) => {
     console.log(`Bộ ${i + 1}:`, validateBooking(t));
 });
+
+
+// ===== DỮ LIỆU LỊCH KHÁM (Ngày 6) =====
+const bookings = [
+    { id: 1, name: "Nguyễn Văn An",   phone: "0912345678", date: "2026-11-20", time: "09:30", status: "pending"  },
+    { id: 2, name: "Trần Thị Bình",   phone: "0987654321", date: "2026-11-16", time: "08:00", status: "approved" },
+    { id: 3, name: "Lê Văn Cường",    phone: "0368866240", date: "2026-11-25", time: "14:00", status: "pending"  },
+    { id: 4, name: "Phạm Minh Dũng",  phone: "0901112233", date: "2026-11-16", time: "15:30", status: "rejected" },
+    { id: 5, name: "Hoàng Thị Em",    phone: "0934556677", date: "2026-11-18", time: "10:00", status: "approved" },
+    { id: 6, name: "Đỗ Hương Giang",  phone: "0977889900", date: "2026-11-20", time: "08:30", status: "pending"  },
+    { id: 7, name: "Vũ Thu Hà",       phone: "0865432198", date: "2026-11-15", time: "13:00", status: "rejected" },
+    { id: 8, name: "Bùi Quốc Khánh",  phone: "0398765432", date: "2026-11-22", time: "11:30", status: "approved" },
+];
+
+// 1. Lọc lịch theo trạng thái → trả về MẢNG MỚI
+function getByStatus(bookings, status) {
+    return bookings.filter((b) => b.status === status);
+}
+
+// 2. Tìm 1 lịch theo id → trả về OBJECT (không thấy → undefined)
+function findById(bookings, id) {
+    return bookings.find((b) => b.id === id);
+}
+
+// 3. Đếm số lịch chờ duyệt → dùng lại getByStatus
+function countPending(bookings) {
+    return getByStatus(bookings, "pending").length;
+}
+
+// 4. Sắp xếp theo ngày, cùng ngày thì theo giờ → trả về BẢN SAO
+function sortByDate(bookings) {
+    const copy = [...bookings];          // tạo bản sao trước khi sort
+    copy.sort((a, b) => {
+        if (a.date !== b.date) {
+            return a.date < b.date ? -1 : 1;
+        }
+        if (a.time !== b.time) {
+            return a.time < b.time ? -1 : 1;
+        }
+        return 0;
+    });
+    return copy;
+}
+const before = JSON.stringify(bookings);   // chụp lại mảng gốc dưới dạng chuỗi
+
+console.log("pending:", getByStatus(bookings, "pending").map((b) => b.id));
+console.log("approved:", getByStatus(bookings, "approved").map((b) => b.id));
+console.log("cancelled:", getByStatus(bookings, "cancelled"));
+console.log("id 3:", findById(bookings, 3));
+console.log("id 99:", findById(bookings, 99));
+console.log("id '3':", findById(bookings, "3"));
+console.log("countPending:", countPending(bookings));
+console.log("sorted:", sortByDate(bookings).map((b) => `${b.id} ${b.date} ${b.time}`));
+
+const after = JSON.stringify(bookings);
+console.log("Mảng gốc không đổi:", before === after);
