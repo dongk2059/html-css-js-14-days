@@ -110,3 +110,46 @@ function findTopStudents(students) {
 }
 
 console.table(findTopStudents(students));
+
+
+console.log("========== Trả nợ mục 1: In mọi thuộc tính ==========");
+
+const student = students[0];
+
+// Cách 1: for...in
+console.log("--- Cách 1: for...in ---");
+for (const key in student) {
+    console.log(`${key}: ${student[key]}`);
+}
+
+// Cách 2: Object.entries + forEach
+console.log("--- Cách 2: Object.entries ---");
+Object.entries(student).forEach(([key, value]) => {
+    console.log(`${key}: ${value}`);
+});
+
+
+console.log("========== Trả nợ mục 3: Viết lại 3 vòng for ==========");
+
+// 1. Đếm nguyên âm
+const text = "Hello JavaScript";
+const vowelCount = text
+    .toLowerCase()
+    .split("")
+    .filter((char) => "aeiou".includes(char))
+    .length;
+console.log("Số nguyên âm:", vowelCount);          // 5
+
+// 2. Tìm số lớn nhất
+const numbers = [12, 45, 7, 89, 23, 56, 89, 10];
+const max = numbers.reduce((currentMax, n) => (n > currentMax ? n : currentMax), numbers[0]);
+console.log("Số lớn nhất:", max);                   // 89
+console.log("Cách ngắn:", Math.max(...numbers));    // 89
+
+// 3. Tổng các chữ số
+const num = 5832;
+const digitSum = String(num)
+    .split("")
+    .map(Number)
+    .reduce((sum, digit) => sum + digit, 0);
+console.log("Tổng các chữ số:", digitSum);          // 18
