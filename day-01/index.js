@@ -177,3 +177,15 @@ console.log("sorted:", sortByDate(bookings).map((b) => `${b.id} ${b.date} ${b.ti
 
 const after = JSON.stringify(bookings);
 console.log("Mảng gốc không đổi:", before === after);
+
+
+
+
+
+// =====================================================
+// NGÀY 7 · MINI PROJECT: QUẢN LÝ LỊCH KHÁM
+// =====================================================
+
+console.log(` =====================================================NGÀY 7 · MINI PROJECT: QUẢN LÝ LỊCH KHÁM=====================================================`);
+
+

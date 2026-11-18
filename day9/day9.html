@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 9</title>
+    <link rel="stylesheet" href="day9.css">
+</head>
+<body>
+<main class="container">
+    <h1>Mini Todo List</h1>
+
+    <form id="todoForm">
+      <input
+        type="text"
+        id="todoInput"
+        placeholder="Nhập công việc cần làm..."
+        required
+      >
+      <button type="submit">Thêm</button>
+    </form>
+
+    <ul id="todoList"></ul>
+
+    <div class="statistics">
+      <p>Tổng công việc: <span id="totalCount">0</span></p>
+      <p>Đã hoàn thành: <span id="completedCount">0</span></p>
+      <p>Chưa hoàn thành: <span id="pendingCount">0</span></p>
+    </div>
+  </main>
+
+<script src="day9.js"></script>
+</body>
+</html>

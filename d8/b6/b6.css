@@ -1,0 +1,7 @@
+.answer {
+  display: none;              /* mặc định: ẨN câu trả lời */
+}
+
+.faq-item.open .answer {
+  display: block;             /* khi khối cha có class open: HIỆN câu trả lời */
+}

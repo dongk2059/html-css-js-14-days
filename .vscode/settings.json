@@ -1,5 +1,11 @@
+
+
 {
   "files.trimTrailingWhitespace": true,
-
-  "liveServer.settings.ignoreFiles": ["**/*.js", "**/*.css", "**/*.html"]
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 300,
+  "liveServer.settings.ignoreFiles": [],
+  "liveServer.settings.fullReload": false,
+  "liveServer.settings.wait": 100,
+  "liveServer.settings.useWebExt": false
 }

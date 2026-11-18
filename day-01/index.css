@@ -27,10 +27,11 @@ header h1 {
   margin: 0;
 }
 
-main{
-    display: flex;
-    justify-content: center;
-    padding: 0 16px;
+main {
+  display: flex;
+  flex-direction: column;   /* xếp form và danh sách theo CỘT (dọc) */
+  align-items: center;      /* căn giữa theo chiều ngang */
+  padding: 0 16px 24px;
 }
 
 form{
@@ -86,4 +87,42 @@ button {
 
 button:hover {
   background-color: #1d4ed8;
+}
+
+
+.booking-section{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#booking-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.badge{
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-size: small;
+  font-weight: bolder;
+}
+.badge.pending{
+  background-color: #fef3c7;
+  color: #92400e;
+}
+.badge.approved{
+  background-color: #dcfce7;
+  color: #166534;
+}
+.badge.rejected{
+  background-color: #fee2e2;
+  color: #991b1b;
 }

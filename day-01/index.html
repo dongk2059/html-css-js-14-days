@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css">
     <title>FORM LỊCH KHÁM</title>
+    <!-- ĐỔI 1: script chuyển lên head + defer -->
+    <script src="index.js" defer></script>
   </head>
 
   <body>
@@ -41,7 +43,7 @@
         <div>
           <label for="time">Giờ khám</label>
           <select id="time" name="time" required>
-          <option value="">Chọn giờ khám</option>
+            <option value="">Chọn giờ khám</option>
           </select>
         </div>
 
@@ -59,13 +61,16 @@
             <option value="rang-ham-mat">Răng Hàm Mặt</option>
           </select>
         </div>
+
         <button type="submit">Đặt lịch</button>
-
-
-
-
-        <script src="index.js"></script>
+        <!-- ĐỔI 2: đã XÓA thẻ <script> ở đây -->
       </form>
+
+      <!-- ĐỔI 3: khu vực danh sách, nằm NGOÀI form -->
+      <section class="booking-section">
+        <h2>Danh sách lịch khám</h2>
+        <ul id="booking-list"></ul>
+      </section>
     </main>
   </body>
 </html>

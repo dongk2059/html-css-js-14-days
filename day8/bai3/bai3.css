@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+
+}
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f7fb;
+    color: #222;
+}
+
+.container{
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+h1{
+    text-align: center;
+}
+
+.statistics{
+    display: flex;
+    justify-content: space-around;
+    gap: 12px;
+    flex-wrap: wrap;
+    background-color: white;
+    padding: 16px;
+    border-radius: 10px;
+    margin-bottom: 24px;
+
+
+}
+
+.statistics p {
+    font-weight: bold;
+}
+
+#totalCount{
+    color: #2563eb;
+}
+
+#inStockCount,
+.in-stock{
+    color: green;
+
+}
+
+#outOfStockCount,
+.out-of-stock{
+    color: red;
+}
+#productList{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.product-card{
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.product-card h2{
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.price{
+    color: #2563eb;
+    font-weight: bold;
+}
+@media (max-width: 600px) {
+  #productList {
+    grid-template-columns: 1fr;
+  }
+}
+
