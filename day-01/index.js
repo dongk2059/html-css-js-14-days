@@ -188,4 +188,80 @@ console.log("Mảng gốc không đổi:", before === after);
 
 console.log(` =====================================================NGÀY 7 · MINI PROJECT: QUẢN LÝ LỊCH KHÁM=====================================================`);
 
+// =====================================================
+// NGÀY 8 · RENDER DANH SÁCH LỊCH TỪ MẢNG bookings
+// =====================================================
 
+// Chữ hiển thị cho từng trạng thái (tra cứu bằng object)
+const STATUS_LABEL = {
+  pending: "Chờ duyệt",
+  approved: "Đã duyệt",
+  rejected: "Từ chối",
+};
+
+// "2026-11-20" → "20/11/2026"
+function formatDate(dateStr) {
+  return dateStr.split("-").reverse().join("/");
+}
+
+// Dựng 1 thẻ lịch từ 1 object booking → TRẢ VỀ thẻ li (chưa gắn lên trang)
+function createBookingCard(booking) {
+  // 1. Tạo thẻ li
+  const li = document.createElement("li");
+  li.classList.add("booking-card");
+
+  // 2. Gắn id của lịch vào thẻ
+  li.dataset.id = booking.id;
+
+  // 3. Phần thông tin: tên + ngày giờ + SĐT (đều dùng textContent → an toàn XSS)
+  const info = document.createElement("div");
+  info.classList.add("booking-info");
+
+  const name = document.createElement("span");
+  name.classList.add("booking-name");
+  name.textContent = booking.name;
+
+  const meta = document.createElement("span");
+  meta.classList.add("booking-meta");
+  meta.textContent = `📅 ${formatDate(booking.date)} · ⏰ ${booking.time} · 📞 ${booking.phone}`;
+
+  info.append(name, meta);
+
+  // 4. Nhãn trạng thái: class chung "badge" + class lấy từ dữ liệu
+  const badge = document.createElement("span");
+  badge.classList.add("badge", booking.status);
+  badge.textContent = STATUS_LABEL[booking.status] ?? booking.status;
+
+  // 5. Ghép phần thông tin + nhãn vào li
+  li.append(info, badge);
+
+  // 6. Trả về thẻ
+  return li;
+}
+
+// Vẽ lại TOÀN BỘ danh sách từ mảng
+function renderBookings(list) {
+  // 1. Tìm thẻ cha
+  const ul = document.querySelector("#booking-list");
+
+  // 2. Xóa danh sách cũ
+  ul.innerHTML = "";
+
+  // 3. Mảng rỗng → báo và dừng
+  if (list.length === 0) {
+    const empty = document.createElement("li");
+    empty.classList.add("empty-message");
+    empty.textContent = "Chưa có lịch nào";
+    ul.append(empty);
+    return;
+  }
+
+  // 4. Mỗi booking → tạo thẻ → gắn vào ul
+  list.forEach((booking) => {
+    const card = createBookingCard(booking);
+    ul.append(card);
+  });
+}
+
+// Vẽ lần đầu khi tải trang, xếp theo ngày giờ (hàm sortByDate của Ngày 6)
+renderBookings(sortByDate(bookings));

@@ -108,21 +108,49 @@ button:hover {
   gap: 12px;
 }
 
-.badge{
-  padding: 2px 8px;
+/* ===== NGÀY 8 · THẺ LỊCH ===== */
+.booking-card {
+  display: flex;
+  justify-content: space-between;   /* thông tin bên trái, nhãn bên phải */
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background-color: white;
+  border: 1px solid #ddd;
   border-radius: 8px;
-  font-size: small;
-  font-weight: bolder;
 }
-.badge.pending{
-  background-color: #fef3c7;
-  color: #92400e;
+
+.booking-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
 }
-.badge.approved{
-  background-color: #dcfce7;
-  color: #166534;
+
+.booking-name {
+  font-weight: bold;
 }
-.badge.rejected{
-  background-color: #fee2e2;
-  color: #991b1b;
+
+.booking-meta {
+  font-size: 14px;
+  color: #555;
 }
+
+.empty-message {
+  color: #777;
+  text-align: center;
+}
+
+/* ===== NHÃN TRẠNG THÁI ===== */
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;     /* bo tròn hai đầu */
+  font-size: 13px;
+  font-weight: bold;
+  white-space: nowrap;      /* nhãn không bị xuống dòng */
+}
+
+.badge.pending  { background-color: #fef3c7; color: #92400e; }
+.badge.approved { background-color: #dcfce7; color: #166534; }
+.badge.rejected { background-color: #fee2e2; color: #991b1b; }
