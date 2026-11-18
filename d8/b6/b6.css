@@ -5,3 +5,11 @@
 .faq-item.open .answer {
   display: block;             /* khi khối cha có class open: HIỆN câu trả lời */
 }
+
+.infor{
+  display: none;
+}
+
+.doctor.show .infor{
+  display: block;
+}

@@ -1,0 +1,36 @@
+#doctor-list {
+  list-style: none;
+  padding: 0;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.doctor-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.info {
+  flex: 1;                    /* phần tên chiếm hết chỗ trống, đẩy nhãn + nút sang phải */
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.badge.online  { background-color: #dcfce7; color: #166534; }
+.badge.offline { background-color: #e5e7eb; color: #374151; }
+
+.hidden {
+  display: none;              /* dùng để ẩn thẻ khi lọc */
+}

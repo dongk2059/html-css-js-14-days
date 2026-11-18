@@ -12,3 +12,19 @@ button.addEventListener("click", function (){
 
 })
 
+
+const sizeButton = document.querySelector("#sizeBtn");
+const guide = document.querySelector("#b4");
+
+sizeButton.addEventListener("click", function (){
+    const size = b4.classList.toggle("large");
+
+    if(size){
+        sizeButton.textContent = "🔍 Chữ Nhỏ";
+    }
+    else{
+        sizeButton.textContent = "🔍 Chữ To";
+    }
+
+})
+

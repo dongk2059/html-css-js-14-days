@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cách 1 · HTML viết sẵn</title>
+    <link rel="stylesheet" href="b7c.css" />
+    <script src="b7c.js" defer></script>
+  </head>
+  <body>
+    <h1>Đội ngũ bác sĩ</h1>
+
+    <label>
+      <input type="checkbox" id="only-online" />
+      Chỉ hiện bác sĩ đang trực
+    </label>
+
+    <!-- 3 thẻ VIẾT SẴN trong HTML -->
+    <ul id="doctor-list">
+      <li class="doctor-card" data-id="1">
+        <span class="info">BS. Nguyễn An – Nội</span>
+        <span class="badge online">Đang trực</span>
+        <button class="shift-btn">Đổi ca</button>
+      </li>
+
+      <li class="doctor-card" data-id="2">
+        <span class="info">BS. Trần Bình – Nhi</span>
+        <span class="badge offline">Nghỉ</span>
+        <button class="shift-btn">Đổi ca</button>
+      </li>
+
+      <li class="doctor-card" data-id="3">
+        <span class="info">BS. Lê Chi – Răng Hàm Mặt</span>
+        <span class="badge online">Đang trực</span>
+        <button class="shift-btn">Đổi ca</button>
+      </li>
+    </ul>
+  </body>
+</html>
